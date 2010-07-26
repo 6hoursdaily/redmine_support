@@ -1,3 +1,13 @@
-= support
+= redmine_support
 
-Description goes here
+== Install and setup
+
+1. Copy this plugin to: vendor/plugins
+
+2. Restart your http server to load the plugin (you'll need to restart if 
+   you add more tabs later).
+
+3. Go to your project Settings and enable the "Support" module.
+
+4. Go to the permissions screen (roles/report), find "Support" and check
+   the boxes as required.
