@@ -1,0 +1,10 @@
+<h2>New support ticket</h2>
+
+<% labelled_tabular_form_for :issue, @issue, :url => { :action => "new" }, :html => {:id => 'issue-form'} do |f| %>
+<div class="box">
+  <%= error_messages_for 'issue' %>
+  <p><%= f.text_field :subject, :size => 80, :required => true %></p>
+  <p><%= f.text_area :description, :required => true, :cols => 60, :rows => (@issue.description.blank? ? 10 : [[10, @issue.description.length / 50].max, 100].min), :accesskey => accesskey(:edit), :class => 'wiki-edit' %></p>
+</div>
+<%= submit_tag l(:button_create) %>
+<% end %>
