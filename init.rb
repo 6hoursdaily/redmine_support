@@ -25,7 +25,7 @@ class SupportViewer < Redmine::Hook::ViewListener
 <script type=\"text/javascript\">
   var elems = $$('#content h2')
   if ((elems != null) && (elems.length > 0))
-    elems[0].insert({after: \"<p>#{image} New users cannot create issues. Please see the <a href=\\\"../tabs/support\\\">support</a> page for more info.</p>\"})
+    elems[0].insert({after: \"<p>#{image} New users cannot create issues. Please see the <a href=\\\"tabs/support\\\">support</a> page for more info.</p>\"})
 </script>
 "
     end
