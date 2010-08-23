@@ -15,7 +15,9 @@ end
 
 class SupportViewer < Redmine::Hook::ViewListener
   def view_layouts_base_body_bottom(context = { })
-    if context[:controller].class.name == 'IssuesController'
+    if context[:controller].class.name == 'IssuesController' \
+      and context[:controller].action_name == 'index'
+      
       image = image_tag("#{ActionController::Base.relative_url_root}/images/help.png", :style => 'margin-bottom: -0.3em;').gsub('"', '\"')
       
       # TODO: make this html a plugin setting
